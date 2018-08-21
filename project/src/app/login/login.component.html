@@ -1,0 +1,21 @@
+<h1 class="h3 mb-3 font-weight-normal">Login</h1>
+
+<form class="form-signin" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" [ngClass]="verificaCSS('email') ? 'form-control-success' : 'form-control-danger'"
+    placeholder="Email" formControlName="email" required autofocus>
+
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" class="form-control" aria-describedby="passwordHelp" [ngClass]="verificaCSS('password') ? 'form-control-success' : 'form-control-danger'"
+    placeholder="Senha" formControlName="password" required>
+
+  <label for="signinButton" class="sr-only">Entrar</label>
+  <button type="submit" id="signinButton" class="btn btn-lg btn-success btn-block" aria-describedby="signInHelp">Entrar</button>
+
+  <hr>
+
+  <label for="registerLink" class="sr-only">Cadastrar-se</label>
+  <a [routerLink]="['/register']" class="btn btn-lg btn-primary btn-block" aria-describedby="registerHelp">Cadastrar-se</a>
+
+  <p class="mt-5 mb-3 text-muted">&copy; Associação Guadalupe 2017-2018</p>
+</form>

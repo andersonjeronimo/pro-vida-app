@@ -1,0 +1,23 @@
+<table class="table table-striped">
+  <thead>
+    <tr class="d-flex">
+      <th class="col-3">Campo 1</th>
+      <th class="col-3">Campo 2</th>
+      <th class="col-3">Campo 3</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="captation">
+    <tr class="d-flex">
+      <td class="col-3">{{captation.field1}}</td>
+      <td class="col-3">{{captation.field2}}</td>
+      <td class="col-3">{{captation.field3}}</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr class="d-flex">
+      <th class="col-3">Campo 1</th>
+      <th class="col-3">Campo 2</th>
+      <th class="col-3">Campo 3</th>
+    </tr>
+  </tfoot>
+</table>

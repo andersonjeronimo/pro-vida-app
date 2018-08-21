@@ -1,0 +1,21 @@
+<h1 class="h3 mb-3 font-weight-normal">Home</h1>
+
+<form class="form-test" [formGroup]="testForm" (ngSubmit)="onSubmit()">
+  <label for="campo1" class="sr-only">Campo 1</label>
+  <input type="text" class="form-control" id="campo1" aria-describedby="campo1Help" [ngClass]="verificaCSS('campo1') ? 'form-control-success' : 'form-control-danger'"
+    placeholder="Preencher campo 1" formControlName="campo1" required autofocus>
+
+  <label for="campo2" class="sr-only">Campo 2</label>
+  <input type="text" class="form-control" id="campo2" aria-describedby="campo2Help" [ngClass]="verificaCSS('campo2') ? 'form-control-success' : 'form-control-danger'"
+    placeholder="Preencher campo 2" formControlName="campo2" required>
+
+  <label for="campo3" class="sr-only">Campo 3</label>
+  <input type="text" class="form-control" id="campo3" aria-describedby="campo3Help" [ngClass]="verificaCSS('campo3') ? 'form-control-success' : 'form-control-danger'"
+    placeholder="Preencher campo 3" formControlName="campo3" required>
+
+  <button type="submit" class="btn btn-lg btn-success btn-block">Cadastrar</button>
+  <hr>
+  <label for="signoutButton" class="sr-only">Sair</label>
+  <button id="signoutButton" class="btn btn-lg btn-danger btn-block" aria-describedby="signOutHelp" (click)="logout()">Sair</button>
+  <p class="mt-5 mb-3 text-muted">&copy; Associação Guadalupe 2017-2018</p>
+</form>

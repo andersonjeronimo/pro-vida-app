@@ -1,0 +1,24 @@
+<h1 class="h3 mb-3 font-weight-normal">Cadastrar usuário</h1>
+
+<form class="form-register" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" [ngClass]="verificaCSS('email') ? 'form-control-success' : 'form-control-danger'"
+    placeholder="Email" formControlName="email" required autofocus>
+
+  <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+
+  <label for="inputPassword1" class="sr-only">Password</label>
+  <input type="password" class="form-control" id="inputPassword1" [ngClass]="verificaCSS('password1') ? 'form-control-success' : 'form-control-danger'"
+    placeholder="Senha" formControlName="password1" required>
+
+  <label for="inputPassword2" class="sr-only">Repeat password</label>
+  <input type="password" class="form-control" id="inputPassword2" [ngClass]="verificaCSS('password2') ? 'form-control-success' : 'form-control-danger'"
+    placeholder="Repetir senha" formControlName="password2" required>
+
+  <button type="submit" class="btn btn-lg btn-success btn-block">Cadastrar</button>
+  <hr>
+  <label for="loginLink" class="sr-only">Voltar</label>
+  <a [routerLink]="['/login']" class="btn btn-lg btn-primary btn-block" aria-describedby="loginHelp">Voltar</a>
+
+  <p class="mt-5 mb-3 text-muted">&copy; Associação Guadalupe 2017-2018</p>
+</form>
